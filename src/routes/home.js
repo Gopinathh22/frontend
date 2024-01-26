@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import cargoBike from "../img/cargo-bike.png";
+import local from "../img/local.png";
+import salad from "../img/salad.png";
+import hourglass from "../img/hourglass.png";
+import microgreens from "../img/microgreens.jpg";
 
 const faqs = [
   {
@@ -44,28 +49,74 @@ const Home = () => {
 
   return (
     <div>
-      <header className="bg-gray-100 p-8 text-center relative overflow-hidden">
-        <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 mb-2">
-          VERDES
-        </h1>
-        <p className="max-w-2xl mx-auto">
-          We are a small business in Vienna that grows microgreens.
-        </p>
-        <a
-          href="#shop"
-          className="mt-4 inline-block bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
-        >
-          Browse our shop
-        </a>
-      </header>
+      <div className="bg-gray-100 flex flex-row items-center">
+        <div className="p-8 text-center">
+          <header className="opener bg-gray-100 relative overflow-hidden">
+            <h1 className="mainText text-6xl font-bold text-transparent bg-clip-text mb-2">
+              VERDES
+            </h1>
+            <h2 className="text-2xl font-semibold mb-4">SERVAS AT VERDES!</h2>
+            <p className="max-w-2xl mx-auto">
+              We are a small business based in Vienna that produces and sells
+              microgreens. Microgreens are small sprouts, infant versions of
+              known vegetable types like broccoli and arugula. They can be used
+              in a variety of ways, for example on bread, in a salad or as a
+              deluxe garnish.
+            </p>
 
+            <a
+              href="#shop"
+              className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
+            >
+              Contact us
+            </a>
+          </header>
+        </div>
+        <img
+          src={microgreens}
+          alt="Microgreens"
+          className="rounded-lg flex-none"
+          style={{ maxWidth: "50%" }}
+        ></img>
+      </div>
+      <br></br>
+
+      <div className="grid grid-cols-4 gap-1 mb-16">
+        <div className="whiteBox flex flex-col items-center text-center">
+          <img
+            src={hourglass}
+            alt="Fresh"
+            className="icon w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+          ></img>
+          <span className="mt-2">Fresh</span>
+        </div>
+        <div className="whiteBox flex flex-col items-center text-center">
+          <img
+            className="icon w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            src={local}
+            alt="Hyperlocality"
+          ></img>
+          <span className="subtext mt-2">Hyperlocality</span>
+        </div>
+        <div className="whiteBox flex flex-col items-center text-center">
+          <img
+            className="icon w-20 h-20 sm:w-22 sm:h-24 md:w-28 md:h-32"
+            src={salad}
+            alt="Nutrition"
+          ></img>
+          <span className="mt-2">Nutrition</span>
+        </div>
+        <div className="whiteBox flex flex-col items-center text-center">
+          <img
+            className="icon w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            src={cargoBike}
+            alt="Sustainability"
+          ></img>
+          <span className="mt-2">Sustainability</span>
+        </div>
+      </div>
       <section id="shop" className="p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-      </section>
-
-      <section className="bg-gray-100 p-8">
-        <h2 className="text-3xl font-bold text-center">Customer reviews</h2>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6"></div>
       </section>
 
       <section className="container mx-auto p-6 font-sans">
@@ -91,40 +142,19 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-4 mb-16">
-          {/** <!-- Value proposition items -->**/}
-          <div className="flex flex-col items-center text-center">
-            {/**  <img src="https://via.placeholder.com/80" alt="Fresh"> -->**/}
-            <span className="mt-2">Fresh</span>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            {/** <img src="https://via.placeholder.com/80" alt="Hyperlocality"> -->**/}
-            <span className="mt-2">Hyperlocality</span>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            {/**<img src="https://via.placeholder.com/80" alt="Nutrition"> -->**/}
-            <span className="mt-2">Nutrition</span>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            {/** <img src="https://via.placeholder.com/80" alt="Sustainability"> -->**/}
-            <span className="mt-2">Sustainability</span>
-          </div>
-        </div>
       </section>
 
-      <div className="bg-green-600 text-white p-8 text-center">
-        <p>Use promo code "SAVE10" for $10 off your purchase of $50 or more</p>
-        <a
-          href="#"
-          className="mt-4 inline-block bg-white text-green-600 px-6 py-2 rounded-full hover:bg-gray-200 transition ease-in-out duration-150"
-        >
-          Shop Now
-        </a>
-      </div>
       <footer className="text-center p-4">
         <p>&copy; 2023 Verdes. All rights reserved.</p>
+        <br></br>
+        <a
+          href="https://www.flaticon.com/free-icons/cargo-bike"
+          title="cargo bike icons"
+          font-size="8px"
+        >
+          Icons from Freepik - Flaticon
+        </a>
       </footer>
-
       <script></script>
     </div>
   );

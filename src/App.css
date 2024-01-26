@@ -6,3 +6,70 @@
   color: #ffd700;
 }
 
+.whiteBox {
+border-radius: 0px 20px;
+background: var(--Greyscale---Grey-50, #F9FAFB);
+box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+height: 200px;
+transition-duration: 0.5s;
+
+}
+
+.whiteBox:hover{
+  background: rgba(0, 64, 30, 0.40);
+  transition-duration: 0.5s;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* Adjust as needed */
+}
+
+.flex-none {
+  flex: none; /* This prevents the image from growing or shrinking */
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .flex-row {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
+
+.opener{
+
+  
+}
+
+
+
+.icon{
+  margin: auto;
+}
+
+
+.mainText{
+  color: #00401E;}
+
+.navText:hover
+{
+  color: #00401E;
+
+}
+.buttonContact{
+  background: #00401E;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
