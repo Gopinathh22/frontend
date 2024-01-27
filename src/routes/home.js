@@ -4,8 +4,12 @@ import local from "../img/local.png";
 import salad from "../img/salad.png";
 import hourglass from "../img/hourglass.png";
 import microgreens from "../img/microgreens.jpg";
-import nooaHead from "../img/nooaHead.jpeg";
+import nooaHead from "../img/nooaHead.png";
 import gopiHead from "../img/gopiHead.jpeg";
+import imc from "../img/logo_imc.png";
+import accent from "../img/logo_accent.png";
+import cpi from "../img/logo_cpi.png";
+import verdes from "../img/Verdes_Logo.png";
 
 const faqs = [
   {
@@ -49,15 +53,34 @@ const Home = () => {
     );
   };
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you can handle the submission, e.g., send data to a server
+    console.log(formData);
+  };
+
   return (
     <div>
-      <div className="bg-gray-100 flex flex-row items-center">
+      <div
+        className="messageBox flex flex-row items-center"
+        style={{ backgroundImage: `url(${microgreens})` }}
+      >
         <div className="p-8 text-center">
           <header className="opener bg-gray-100 relative overflow-hidden">
-            <h1 className="mainText text-6xl font-bold text-transparent bg-clip-text mb-2">
-              VERDES
-            </h1>
-            <h2 className="text-2xl font-semibold mb-4">SERVAS AT VERDES!</h2>
+            <img src={verdes} alt="Verdes Logo" className="logo"></img>
+            <h2 className="subtitle text-2xl font-semibold mb-4">
+              SERVAS AT VERDES!
+            </h2>
             <p className="max-w-2xl mx-auto">
               We are a small business based in Vienna that produces and sells
               microgreens. Microgreens are small sprouts, infant versions of
@@ -65,19 +88,23 @@ const Home = () => {
               in a variety of ways, for example on bread, in a salad or as a
               deluxe garnish.
             </p>
-
             <a
-              href="#shop"
+              href="#contact"
               className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
             >
               Contact us
             </a>
           </header>
+          {/*<div className="arrows-container">
+            <div className="scroll-down-arrow mt-2">v</div>
+            <div className="scroll-down-arrow mt-2">v</div>
+            <div className="scroll-down-arrow mt-2">v</div>
+          </div>*/}
         </div>
         <img
           src={microgreens}
           alt="Microgreens"
-          className="rounded-lg flex-none"
+          className="nonBgImage rounded-lg flex-none"
           style={{ maxWidth: "50%" }}
         ></img>
       </div>
@@ -88,21 +115,41 @@ const Home = () => {
       <br></br>
       <section>
         <div className="grid grid-cols-4 gap-1 mb-16">
-          <div className="whiteBox flex flex-col items-center text-center">
-            <img src={hourglass} alt="Fresh" className="icon" />
-            <span className="iconText">Fresh</span>
+          <divs className="whiteBox">
+            <div className="whiteBoxFront flex flex-col items-center text-center">
+              <img src={hourglass} alt="Fresh" className="icon" />
+              <span className="iconText">Fresh</span>
+            </div>
+            <div className="whiteBoxBack">
+              <span>Some text to display on hover</span>
+            </div>
+          </divs>
+          <div className="whiteBox">
+            <div className="whiteBoxFront flex flex-col items-center text-center">
+              <img src={local} alt="Hyperlocality" className="icon" />
+              <span className="iconText">Hyperlocality</span>
+            </div>
+            <div className="whiteBoxBack">
+              <span>Some text to display on hover</span>
+            </div>
           </div>
-          <div className="whiteBox flex flex-col items-center text-center">
-            <img src={local} alt="Hyperlocality" className="icon" />
-            <span className="iconText">Hyperlocality</span>
+          <div className="whiteBox">
+            <div className="whiteBoxFront flex flex-col items-center text-center">
+              <img src={salad} alt="Nutrition" className="icon" />
+              <span className="iconText">Nutrition</span>
+            </div>
+            <div className="whiteBoxBack">
+              <span>Some text to display on hover</span>
+            </div>
           </div>
-          <div className="whiteBox flex flex-col items-center text-center">
-            <img src={salad} alt="Nutrition" className="icon" />
-            <span className="iconText">Nutrition</span>
-          </div>
-          <div className="whiteBox flex flex-col items-center text-center">
-            <img src={cargoBike} alt="Sustainability" className="icon" />
-            <span className="iconText">Sustainability</span>
+          <div className="whiteBox">
+            <div className="whiteBoxFront flex flex-col items-center text-center">
+              <img src={cargoBike} alt="Sustainability" className="icon" />
+              <span className="iconText">Sustainability</span>
+            </div>
+            <div className="whiteBoxBack">
+              <span>Some text to display on hover</span>
+            </div>
           </div>
         </div>
       </section>
@@ -128,8 +175,9 @@ const Home = () => {
               </h3>
               <p className="member-title text-md mb-2">Co-Founder & CEO</p>
               <p className="member-info">
-                Jane has over 10 years of experience in the industry. She's
-                passionate about sustainable business and loves to innovate.
+                Gopi, a passionate microgreens entrepreneur and forward-thinker,
+                who has played a pivotal role in steering our microgreens
+                business towards innovation and growth.
               </p>
             </div>
 
@@ -142,8 +190,9 @@ const Home = () => {
               <h3 className="member-name text-xl font-semibold">Nooa ADAMS</h3>
               <p className="member-title text-md mb-2">Co-Founder & CTO</p>
               <p className="member-info">
-                John, a tech enthusiast and visionary, has been instrumental in
-                shaping the company's technological direction.
+                Nooa, a motivated economics student, who is passionate about
+                founding and running successful businesses and has excellent
+                leadership skills.
               </p>
             </div>
           </div>
@@ -180,7 +229,123 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <a
+          href="#contact"
+          className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
+        >
+          Questions? Contact Us!
+        </a>
       </section>
+
+      <section className="bg-gray-100 py-8">
+        <h2 className="text-center text-3xl font-semibold mb-4">
+          Our Partners
+        </h2>
+
+        <div className="companies flex flex-wrap justify-center">
+          <div className="company">
+            <a href="https://www.fh-krems.ac.at/">
+              <img src={imc} alt="Company 2 Logo" />
+            </a>
+          </div>
+          <div className="company">
+            <a href="https://accent.at/">
+              <img src={accent} alt="Company 3 Logo" />
+            </a>
+          </div>
+          <div className="company">
+            <a href="https://creativepreincubator.at/">
+              <img src={cpi} alt="Company 4 Logo" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="contact-section bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <h2 className="text-center text-3xl font-semibold mb-4">
+            Contact Us
+          </h2>
+          <br></br>
+          <form onSubmit={handleSubmit} className="w-full max-w-lg">
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="name"
+                >
+                  Your Name
+                </label>
+              </div>
+              <div className="md:w-2/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-800"
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="John Doe"
+                />
+              </div>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="email"
+                >
+                  Your Email
+                </label>
+              </div>
+              <div className="md:w-2/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-800"
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+              </div>
+              <div className="md:w-2/3">
+                <textarea
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-800"
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your message here"
+                />
+              </div>
+            </div>
+            <div className="md:flex md:items-center">
+              <div className="md:w-1/3"></div>
+              <div className="md:w-2/3">
+                <button
+                  className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <br></br>
 
       <footer className="text-center p-4">
         <p>&copy; 2023 Verdes. All rights reserved.</p>

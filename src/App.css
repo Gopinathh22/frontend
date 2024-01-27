@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* STYLE FOR NAVBAR */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* Adjust to match your color scheme */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  font-family: Arial, sans-serif; /* Choose a web-friendly font */
+  padding: 0.5rem 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  display: none;
+
+}
+
+
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  align-items:center;
+  justify-content: center;
+  margin-left: auto;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333333; /* Adjust for better contrast */
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #05840c; /* Hover effect color */
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffffdd;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    gap: 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggler {
+    display: block; /* Ensure the toggler is visible on small screens */
+  }
+}
+
+
+/* STYLE FOR NAVBAR END */
+
+/* STYLE FOR HOME PAGE */
 .star-rating .filled {
   color: #ffd700;
 }
@@ -21,11 +102,103 @@
   flex: none; /* This prevents the image from growing or shrinking */
 }
 
+.logo {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  display: block; /* Change display to block */
+  margin-left: auto; /* Auto margin on left */
+  margin-right: auto; /* Auto margin on right */
+  margin-bottom: 20px;
+}
+
+
+.opener {
+  background-color: transparent;
+}
+
+/* Old Arrow function (didn't work well on mobile)
+.arrows-container {
+  display: none; 
+  position: absolute;
+  bottom: -50%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  text-align: center;  
+}
+
+.scroll-down-arrow {
+  font-size: 2rem; 
+  color: #00401E; 
+  animation: blink 1.5s step-start infinite;
+  margin-top: 5px; 
+}
+*/
+
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
   .flex-row {
     flex-direction: column;
     display: flex;
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Needed for positioning the overlay */
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+
+
   }
+
+
+  .flex-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); /* White background with opacity */
+    z-index: 1;
+    
+
+  }
+
+  .flex-row > * {
+    position: relative; /* Make sure content is above the overlay */
+    z-index: 2;
+    margin-top: 3rem; /* Adjust as needed */
+
+  }
+
+  .nonBgImage {
+    display: none;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    width: 100x; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    display: block; /* Change display to block */
+    margin-left: auto; /* Auto margin on left */
+    margin-right: auto; /* Auto margin on right */
+    margin-bottom: 20px;
+  }
+
+  .opener {
+    background-color: transparent;
+    /*Make the body in the middle*/
+    text-align: center;
+    margin-top: auto;
+    font-size: 1.3rem;
+    margin-top: 15%;
+
+  }
+
+    .arrows-container {
+    display: block; /* Show only on mobile */
+  }
+
 }
 
 
@@ -49,10 +222,13 @@
   transition-duration: 0.5s;
 }
 
+/* STYLE FOR HOME PAGE END */
+
 
 /* STYLE FOR FAQ */
 .faq-container {
   max-width: 800px; /* Adjust as per design */
+  
 
 }
 
@@ -74,6 +250,7 @@
 
 .faq-question:hover {
   color: #00401E; /* Adjust hover color as needed */
+  
 }
 
 .faq-answer {
@@ -88,10 +265,12 @@
   content: '+ ';
   font-weight: bold;
   color: #00401E; /* Adjust icon color as needed */
+  
 }
 
 .faq-item.open .faq-question::before {
   content: '- ';
+  
 }
 
 
@@ -104,12 +283,17 @@
   gap: 1rem;
 }
 
-.whiteBox {
+
+.whiteBoxFront, .whiteBoxBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when it's turned away */
+  transition: transform 0.5s ease;
   border-radius: 20px;
-  background: var(--Greyscale---Grey-50, #F9FAFB);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  height: 200px;
-  transition: background-color 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,8 +301,37 @@
   padding: 1rem;
 }
 
-.whiteBox:hover {
-  background: rgba(0, 64, 30, 0.4);
+
+.whiteBox {
+  perspective: 1000px; /* Enable 3D effect */
+  position: relative; /* Set position to relative */
+  width: 100%; /* Full width of the grid column */
+  height: 200px; /* Fixed height */
+  margin-bottom: 1rem; /* Add some space between boxes */
+}
+
+.whiteBoxFront{
+  border-radius: 20px;
+  background: var(--Greyscale---Grey-50, #F9FAFB);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  height: 200px;
+  transition: background-color 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.whiteBoxBack {
+  transform: rotateY(180deg);
+}
+
+.whiteBox:hover .whiteBoxFront {
+  transform: rotateY(180deg);
+}
+
+.whiteBox:hover .whiteBoxBack {
+  transform: rotateY(0deg);
 }
 
 .icon {
@@ -139,6 +352,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  
+
   .icon {
     width: 3rem; /* 48px */
     height: 3rem; /* 48px */
@@ -146,11 +361,12 @@
 }
 
 
+
 /* STYLE FOR BENIFITS END */
 
 /* STYLE FOR ABOUT US */
 .about-us-section {
-  background: #f9f9f9;
+  background: #F5F5F5;
   padding: 40px 0;
 }
 
@@ -179,7 +395,13 @@
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(100%);
-  
+  transition: all 0.3s ease;
+}
+
+.member-photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
 }
 
 .member-name {
@@ -203,4 +425,62 @@
   }
 }
 
+/* STYLE FOR ABOUT US END */
+
+/* STYLE FOR COMPANY */
+.companies-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background: #f9f9f9; /* Example background color */
+}
+
+.company {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Inner spacing */
+  margin: 10px; /* Space between boxes */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  background-color: white; /* White background */
+  text-align: center; /* Center content */
+  flex-basis: calc(25% - 20px); /* Adjust width and account for margin */
+  max-width: 220px; /* Maximum width of each box */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+.company img {
+  max-width: 100px; /* Adjust the size as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.company a:hover img {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.company-description {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .companies-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company {
+    flex-basis: 90%; /* Takes more space in mobile view */
+  }
+}
+
+/* STYLE FOR COMPANY END */
 
