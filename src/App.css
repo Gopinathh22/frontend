@@ -8,6 +8,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* STYLE FOR NAVBAR */
 
 .navbar {
@@ -88,7 +92,7 @@
 }
 
 
-.flex-row {
+.flex-row { 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,6 +118,12 @@
 
 .opener {
   background-color: transparent;
+}
+
+.messageBox{
+   background-color: #D7DBD4;
+
+
 }
 
 /* Old Arrow function (didn't work well on mobile)
@@ -146,6 +156,12 @@
 
   }
 
+
+  .messageBox{
+    background-image: url("./img/microgreens.jpg");
+
+  }
+  
 
   .flex-row::before {
     content: '';
@@ -484,3 +500,12 @@
 
 /* STYLE FOR COMPANY END */
 
+/* STYLE FOR FOOTER */
+
+.footer{
+  background: #D7DBD4;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}

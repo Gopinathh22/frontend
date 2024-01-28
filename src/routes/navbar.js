@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa"; // If using react-icons for the hamburger menu
+import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +25,16 @@ const Navbar = () => {
             isOpen ? "active" : ""
           } hidden lg:flex lg:justify-start`}
         >
-          <a href="#" className="navText">
-            HOME
+          <a href="" className="navText">
+            <Link to="/#home">HOME </Link>
           </a>
-          <a href="#about-us" className="navText">
-            ABOUT
+          <a href="" className="navText">
+            {" "}
+            <Link to="/about">ABOUT US </Link>
           </a>
           <a href="#" className="navText">
-            CONTACT
+            {" "}
+            <Link to="/#contact">CONTACT </Link>
           </a>
         </div>
       </div>

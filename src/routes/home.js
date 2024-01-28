@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import cargoBike from "../img/cargo-bike.png";
 import local from "../img/local.png";
 import salad from "../img/salad.png";
@@ -41,6 +43,22 @@ const Home = () => {
     faqs.map((faq) => ({ ...faq, open: false }))
   );
 
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash === "#contact") {
+      // Scroll to the contact section
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (hash === "#home" || hash === "") {
+      // Scroll to the top of the page
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]); // Depend on location
+
   const toggleFAQ = (index) => {
     setFaqItems(
       faqItems.map((faq, i) => {
@@ -59,22 +77,38 @@ const Home = () => {
     message: "",
   });
 
+  const [lists, setList] = useState([]);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const postList = async (post) => {
+    try {
+      const response = await fetch("http://localhost:4000/api/form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(post),
+      });
+      const data = await response.json();
+      setList([...lists, data]);
+    } catch (error) {
+      console.error("Error: ", error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle the submission, e.g., send data to a server
-    console.log(formData);
+    postList(formData);
+    alert("Your message has been sent!");
+    setFormData({ name: "", email: "", message: "" }); // Reset form after submit
   };
 
   return (
     <div>
-      <div
-        className="messageBox flex flex-row items-center"
-        style={{ backgroundImage: `url(${microgreens})` }}
-      >
+      <div className="messageBox flex flex-row items-center" id="home">
         <div className="p-8 text-center">
           <header className="opener bg-gray-100 relative overflow-hidden">
             <img src={verdes} alt="Verdes Logo" className="logo"></img>
@@ -153,11 +187,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="shop" className="p-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-      </section>
 
-      <section className="about-us-section py-8">
+      <section className="about-us-section py-8 shadow-md rounded-lg">
         <div className="container mx-auto text-center">
           <h2 className="section-title text-3xl font-semibold mb-6">
             About Us
@@ -173,7 +204,7 @@ const Home = () => {
               <h3 className="member-name text-xl font-semibold">
                 Gopinath HARIHARASUDHAN
               </h3>
-              <p className="member-title text-md mb-2">Co-Founder & CEO</p>
+              <p className="member-title text-md mb-2">Co-Founder & COO</p>
               <p className="member-info">
                 Gopi, a passionate microgreens entrepreneur and forward-thinker,
                 who has played a pivotal role in steering our microgreens
@@ -188,7 +219,7 @@ const Home = () => {
                 className="member-photo mb-4"
               />
               <h3 className="member-name text-xl font-semibold">Nooa ADAMS</h3>
-              <p className="member-title text-md mb-2">Co-Founder & CTO</p>
+              <p className="member-title text-md mb-2">Co-Founder & CEO</p>
               <p className="member-info">
                 Nooa, a motivated economics student, who is passionate about
                 founding and running successful businesses and has excellent
@@ -237,12 +268,12 @@ const Home = () => {
         </a>
       </section>
 
-      <section className="bg-gray-100 py-8">
+      <section className="bg-gray-100 py-8 shadow-md rounded-lg">
         <h2 className="text-center text-3xl font-semibold mb-4">
           Our Partners
         </h2>
 
-        <div className="companies flex flex-wrap justify-center">
+        <div className="companies flex flex-wrap justify-center ">
           <div className="company">
             <a href="https://www.fh-krems.ac.at/">
               <img src={imc} alt="Company 2 Logo" />
@@ -262,8 +293,8 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="contact-section bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <h2 className="text-center text-3xl font-semibold mb-4">
+        <div className="contact-section bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+          <h2 className="text-center text-3xl font-semibold mb-4" id="contact">
             Contact Us
           </h2>
           <br></br>
@@ -345,19 +376,6 @@ const Home = () => {
         </div>
       </section>
 
-      <br></br>
-
-      <footer className="text-center p-4">
-        <p>&copy; 2023 Verdes. All rights reserved.</p>
-        <br></br>
-        <a
-          href="https://www.flaticon.com/free-icons/cargo-bike"
-          title="cargo bike icons"
-          font-size="8px"
-        >
-          Icons from Freepik - Flaticon
-        </a>
-      </footer>
       <script></script>
     </div>
   );
