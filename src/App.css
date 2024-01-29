@@ -34,6 +34,15 @@ html {
 
 }
 
+.language-button {
+  background-color: #00401E; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
 
 
 .navbar-links {
@@ -508,4 +517,12 @@ html {
   padding: 20px;
   text-align: center;
   margin-top: 20px;
+}
+
+/* STYLE FOR FOOTER END */
+
+/* STYLE FOR ABOUT US */
+
+.banner{
+  background-color: #D7DBD4;
 }

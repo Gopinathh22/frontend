@@ -12,36 +12,26 @@ import imc from "../img/logo_imc.png";
 import accent from "../img/logo_accent.png";
 import cpi from "../img/logo_cpi.png";
 import verdes from "../img/Verdes_Logo.png";
+import { useTranslation } from "react-i18next";
 
-const faqs = [
-  {
-    question: "What are microgreens?",
-    answer:
-      "Microgreens are young plants (seedlings) that are eaten before they are fully mature. They include all kinds of varieties such as veggies, herbs, and legumes.",
-  },
-  {
-    question: "How can I use microgreens in cooking?",
-    answer: "Placeholder answer for cooking with microgreens.",
-  },
-  {
-    question: "What are the different types of microgreens?",
-    answer: "Placeholder answer for different types of microgreens.",
-  },
-  {
-    question: "How long does the shipping take?",
-    answer: "Placeholder answer for shipping duration.",
-  },
-  {
-    question: "How to initiate the refund process?",
-    answer: "Placeholder answer for initiating a refund.",
-  },
-];
 // Accordion functionality for FAQ
 
 const Home = () => {
-  const [faqItems, setFaqItems] = useState(
-    faqs.map((faq) => ({ ...faq, open: false }))
-  );
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
+  const initializeFaqItems = () => {
+    const faqs = t("faqs", { returnObjects: true });
+    return faqs.map((faq) => ({ ...faq, open: false }));
+  };
+  const [faqItems, setFaqItems] = useState(initializeFaqItems());
+
+  useEffect(() => {
+    setFaqItems(initializeFaqItems());
+  }, [i18n.language]);
 
   const location = useLocation();
 
@@ -102,7 +92,7 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     postList(formData);
-    alert("Your message has been sent!");
+    alert(t("alert"));
     setFormData({ name: "", email: "", message: "" }); // Reset form after submit
   };
 
@@ -112,21 +102,15 @@ const Home = () => {
         <div className="p-8 text-center">
           <header className="opener bg-gray-100 relative overflow-hidden">
             <img src={verdes} alt="Verdes Logo" className="logo"></img>
-            <h2 className="subtitle text-2xl font-semibold mb-4">
-              SERVAS AT VERDES!
+            <h2 className="text-4xl font-bold text-green-800 p-4">
+              {t("title")}
             </h2>
-            <p className="max-w-2xl mx-auto">
-              We are a small business based in Vienna that produces and sells
-              microgreens. Microgreens are small sprouts, infant versions of
-              known vegetable types like broccoli and arugula. They can be used
-              in a variety of ways, for example on bread, in a salad or as a
-              deluxe garnish.
-            </p>
+            <p className="max-w-2xl mx-auto">{t("description")}</p>
             <a
               href="#contact"
               className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
             >
-              Contact us
+              {t("buttonContact")}
             </a>
           </header>
           {/*<div className="arrows-container">
@@ -152,37 +136,37 @@ const Home = () => {
           <divs className="whiteBox">
             <div className="whiteBoxFront flex flex-col items-center text-center">
               <img src={hourglass} alt="Fresh" className="icon" />
-              <span className="iconText">Fresh</span>
+              <span className="iconText"> {t("fresh")}</span>
             </div>
             <div className="whiteBoxBack">
-              <span>Some text to display on hover</span>
+              <span> {t("freshDes")}</span>
             </div>
           </divs>
           <div className="whiteBox">
             <div className="whiteBoxFront flex flex-col items-center text-center">
               <img src={local} alt="Hyperlocality" className="icon" />
-              <span className="iconText">Hyperlocality</span>
+              <span className="iconText">{t("local")}</span>
             </div>
             <div className="whiteBoxBack">
-              <span>Some text to display on hover</span>
+              <span>{t("localDes")}</span>
             </div>
           </div>
           <div className="whiteBox">
             <div className="whiteBoxFront flex flex-col items-center text-center">
               <img src={salad} alt="Nutrition" className="icon" />
-              <span className="iconText">Nutrition</span>
+              <span className="iconText">{t("nutrition")}</span>
             </div>
             <div className="whiteBoxBack">
-              <span>Some text to display on hover</span>
+              <span>{t("nutritionDes")}</span>
             </div>
           </div>
           <div className="whiteBox">
             <div className="whiteBoxFront flex flex-col items-center text-center">
               <img src={cargoBike} alt="Sustainability" className="icon" />
-              <span className="iconText">Sustainability</span>
+              <span className="iconText">{t("sustainability")}</span>
             </div>
             <div className="whiteBoxBack">
-              <span>Some text to display on hover</span>
+              <span>{t("sustainabilityDes")}</span>
             </div>
           </div>
         </div>
@@ -204,12 +188,8 @@ const Home = () => {
               <h3 className="member-name text-xl font-semibold">
                 Gopinath HARIHARASUDHAN
               </h3>
-              <p className="member-title text-md mb-2">Co-Founder & COO</p>
-              <p className="member-info">
-                Gopi, a passionate microgreens entrepreneur and forward-thinker,
-                who has played a pivotal role in steering our microgreens
-                business towards innovation and growth.
-              </p>
+              <p className="member-title text-md mb-2">{t("gopiTitle")}</p>
+              <p className="member-info">{t("gopiDes")}</p>
             </div>
 
             <div className="team-member">
@@ -219,12 +199,8 @@ const Home = () => {
                 className="member-photo mb-4"
               />
               <h3 className="member-name text-xl font-semibold">Nooa ADAMS</h3>
-              <p className="member-title text-md mb-2">Co-Founder & CEO</p>
-              <p className="member-info">
-                Nooa, a motivated economics student, who is passionate about
-                founding and running successful businesses and has excellent
-                leadership skills.
-              </p>
+              <p className="member-title text-md mb-2">{t("nooaTitle")}</p>
+              <p className="member-info">{t("nooaDes")}</p>
             </div>
           </div>
           <br></br>
@@ -232,7 +208,7 @@ const Home = () => {
             href="#about"
             className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
           >
-            Learn more about us
+            {t("buttonLearn")}
           </a>
         </div>
       </section>
@@ -264,7 +240,7 @@ const Home = () => {
           href="#contact"
           className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
         >
-          Questions? Contact Us!
+          {t("question")}
         </a>
       </section>
 
@@ -305,7 +281,7 @@ const Home = () => {
                   className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
                   htmlFor="name"
                 >
-                  Your Name
+                  {t("name")}
                 </label>
               </div>
               <div className="md:w-2/3">
@@ -326,7 +302,7 @@ const Home = () => {
                   className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
                   htmlFor="email"
                 >
-                  Your Email
+                  {t("email")}
                 </label>
               </div>
               <div className="md:w-2/3">
@@ -347,7 +323,7 @@ const Home = () => {
                   className="block text-gray-500 md:text-right mb-1 md:mb-0 pr-4"
                   htmlFor="message"
                 >
-                  Message
+                  {t("message")}
                 </label>
               </div>
               <div className="md:w-2/3">
@@ -357,7 +333,7 @@ const Home = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your message here"
+                  placeholder={t("messagePlaceholder")}
                 />
               </div>
             </div>
@@ -368,7 +344,7 @@ const Home = () => {
                   className="buttonContact mt-4 inline-block text-white px-6 py-2 rounded-full hover:bg-green-700 transition ease-in-out duration-150"
                   type="submit"
                 >
-                  Send Message
+                  {t("send")}
                 </button>
               </div>
             </div>

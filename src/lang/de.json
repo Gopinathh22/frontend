@@ -1,0 +1,53 @@
+{
+    "title": "SERVAS BEI VERDES!",
+    "description": "Wir sind ein kleines Unternehmen mit Sitz in Wien, das Microgreens produziert und verkauft. Microgreens sind kleine Sprossen, die Infantversionen bekannter Gemüsesorten wie Brokkoli und Rucola sind. Sie können auf verschiedene Arten verwendet werden, zum Beispiel auf Brot, in einem Salat oder als exklusive Garnitur.",
+    "fresh": "Frisch",
+    "freshDes": "Wir ernten unsere Microgreens am Tag der Lieferung, damit Sie sicher sein können, das frischeste Produkt zu erhalten.",
+    "local": "Lokal",
+    "localDes": "Wir ziehen unsere Microgreens in Wien an, damit Sie sicher sein können, ein lokales Produkt zu erhalten.",
+    "nutrition": "Ernährung",
+    "nutritionDes": "Microgreens sind reich an Vitaminen und Mineralstoffen, damit Sie sicher sein können, ein gesundes Produkt zu erhalten.",
+    "sustainability": "Nachhaltigkeit",
+    "sustainabilityDes": "Wir verwenden nur biologisches Saatgut und kompostierbare Verpackungen, damit Sie sicher sein können, ein nachhaltiges Produkt zu erhalten.",
+    "gopiTitle": "Mitbegründer & COO",
+    "gopiDes": "Gopi, ein leidenschaftlicher Microgreens-Unternehmer und Vordenker, der eine entscheidende Rolle bei der Lenkung unseres Microgreens-Geschäfts in Richtung Innovation und Wachstum gespielt hat.",
+    "nooaTitle": "Mitbegründer & CEO",
+    "nooaDes": "Nooa, ein motivierter Wirtschaftsstudent, der sich leidenschaftlich für die Gründung und Führung erfolgreicher Unternehmen einsetzt und über ausgezeichnete Führungsqualitäten verfügt.",
+    "buttonLearn" : "Erfahren Sie mehr über uns",
+    "aboutTitle": "Lokal, Emissionsfrei, Frisch! Wie?",
+    "aboutDes": "Unsere Sorten verwandeln jede Mahlzeit in ein kulinarisches Abenteuer. Erfahren Sie, wer sie herstellt, und warum sie die besten in Österreich sind!",
+    "buttonContact": "Kontaktieren Sie uns",
+    "img1Des": "Unsere Microgreens werden in Wien, Österreich, angebaut.",
+    "img2Des": "Wir verwenden nur biologisches Saatgut und kompostierbare Verpackungen.",
+    "pitchDes": "Wir sind ein kleines Unternehmen mit Sitz in Wien, das Microgreens produziert und verkauft. Microgreens sind kleine Sprossen, Infantversionen bekannter Gemüsesorten wie Brokkoli und Rucola. Sie können auf verschiedene Arten verwendet werden, zum Beispiel auf Brot, in einem Salat oder als exklusive Garnitur. (Auf Englisch!)",
+    "faqs": [
+        {
+          "question": "Was sind Microgreens?",
+          "answer": "Microgreens sind junge Pflanzen (Keimlinge), die verzehrt werden, bevor sie vollständig ausgereift sind. Sie umfassen viele verschiedene Arten wie Gemüse, Kräuter und Hülsenfrüchte."
+        },
+        {
+          "question": "Wie kann ich Microgreens in der Küche verwenden?",
+          "answer": "Microgreens können auf vielfältige Weise beim Kochen verwendet werden. Sie können Salaten, Sandwiches und Wraps für einen Nährstoffschub hinzugefügt, als Garnierung für Suppen und Hauptgerichte verwendet oder für zusätzlichen Geschmack und Nährstoffe in Smoothies gemischt werden."
+        },
+        {
+          "question": "Welche verschiedenen Arten von Microgreens gibt es?",
+          "answer": "Es gibt viele Arten von Microgreens, dazu gehören unter anderem Rucola, Basilikum, Rote Bete-Blätter, Brokkoli, Koriander, Grünkohl, Senfblätter, Radieschengrün und Brunnenkresse."
+        },
+        {
+          "question": "Wie lange dauert der Versand?",
+          "answer": "Die Versandzeit kann je nach Standort variieren. In der Regel dauert es 3-5 Werktage für den Inlandsversand und bis zu 2 Wochen für den internationalen Versand."
+        },
+        {
+          "question": "Wie leite ich den Rückerstattungsprozess ein?",
+          "answer": "Um eine Rückerstattung einzuleiten, kontaktieren Sie bitte unseren Kundendienst mit Ihren Bestelldetails. Rückerstattungsanfragen werden in der Regel innerhalb von 5-7 Werktagen bearbeitet."
+        }
+      ],
+      "question": "Fragen? Kontaktieren Sie uns!",
+        "name": "Deine Name",
+        "email": "Deine E-Mail",
+        "message": "Nachricht",
+        "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+        "send": "Nachricht senden",
+        "alert": "Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie möglich bei Ihnen melden."
+
+}

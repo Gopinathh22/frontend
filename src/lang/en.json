@@ -1,0 +1,55 @@
+{
+    "title": "SERVAS AT VERDES!",
+    "description": "We are a small business based in Vienna that produces and sells microgreens. Microgreens are small sprouts, infant versions of known vegetable types like broccoli and arugula. They can be used in a variety of ways, for example on bread, in a salad or as a deluxe garnish.",
+    "fresh": "Fresh",
+    "freshDes": "We harvest our microgreens on the day of delivery, so you can be sure that you are getting the freshest possible product.",
+    "local": "Local",
+    "localDes": "We grow our microgreens in Vienna, so you can be sure that you are getting a local product.",
+    "nutrition": "Nutrition",
+    "nutritionDes": "Microgreens are rich in vitamins and minerals, so you can be sure that you are getting a healthy product.",
+    "sustainability": "Sustainability",
+    "sustainabilityDes": "We use only organic seeds and compostable packaging, so you can be sure that you are getting a sustainable product.",
+    "gopiTitle": "Co-Founder & COO",
+    "gopiDes": "Gopi, a passionate microgreens entrepreneur and forward-thinker, who has played a pivotal role in steering our microgreens business towards innovation and growth.",
+    "nooaTitle": "Co-Founder & CEO",
+    "nooaDes": "Nooa, a motivated economics student, who is passionate about founding and running successful businesses and has excellent leadership skills.",
+    "buttonLearn" : "Learn more about us",
+    "aboutTitle": "Local, Zero-Emission, Fresh! How?",
+    "aboutDes": "Our varieties turn every meal into a culinary adventure. Get to know who makes them, and why they are the best in Austria!",
+    "buttonContact": "Contact us",
+    "img1Des": "Our microgreens are grown in Vienna, Austria.",
+    "img2Des": "We use only organic seeds and compostable packaging.",
+    "pitchTitle": "Our Pitch",
+    "pitchDes": "We are a small business based in Vienna that produces and sells microgreens. Microgreens are small sprouts, infant versions of known vegetable types like broccoli and arugula. They can be used in a variety of ways, for example on bread, in a salad or as a deluxe garnish.",
+    "faqs": [
+        {
+          "question": "What are microgreens?",
+          "answer": "Microgreens are young plants (seedlings) that are eaten before they are fully mature. They include all kinds of varieties such as veggies, herbs, and legumes."
+        },
+        {
+          "question": "How can I use microgreens in cooking?",
+          "answer": "Microgreens can be used in a variety of ways in cooking. They can be added to salads, sandwiches, and wraps for a nutritional boost, used as garnishes on soups and main dishes, or blended into smoothies for extra flavor and nutrients."
+        },
+        {
+          "question": "What are the different types of microgreens?",
+          "answer": "There are many types of microgreens, including but not limited to arugula, basil, beet greens, broccoli, cilantro, kale, mustard greens, radish greens, and watercress."
+        },
+        {
+          "question": "How long does the shipping take?",
+          "answer": "The shipping time can vary depending on your location. Typically, it takes 3-5 business days for domestic shipping and up to 2 weeks for international shipping."
+        },
+        {
+          "question": "How to initiate the refund process?",
+          "answer": "To initiate a refund, please contact our customer service with your order details. Refund requests are typically processed within 5-7 business days."
+        }
+      ],
+    "question": "Question? Contact us!",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Message",
+    "messagePlaceholder": "Type your message here...",
+    "send": "Send Message",
+    "alert": "Your message has been sent! We will get back to you as soon as possible."
+
+
+}
