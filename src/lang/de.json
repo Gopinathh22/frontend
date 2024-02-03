@@ -23,23 +23,19 @@
     "faqs": [
         {
           "question": "Was sind Microgreens?",
-          "answer": "Microgreens sind junge Pflanzen (Keimlinge), die verzehrt werden, bevor sie vollständig ausgereift sind. Sie umfassen viele verschiedene Arten wie Gemüse, Kräuter und Hülsenfrüchte."
+          "answer": "   Microgreens sind junge, essbare Pflanzen, die in einem frühen Stadium geerntet werden. Normalerweise, wenn sie ihr erstes Blattpaar entwickelt haben. Diese kleinen Grünpflanzen sind reich an Geschmack und Nährstoffen und eignen sich hervorragend als perfekte Ergänzung zu Ihren Gerichten, und all das zu einem großartigen Preis."
         },
         {
-          "question": "Wie kann ich Microgreens in der Küche verwenden?",
-          "answer": "Microgreens können auf vielfältige Weise beim Kochen verwendet werden. Sie können Salaten, Sandwiches und Wraps für einen Nährstoffschub hinzugefügt, als Garnierung für Suppen und Hauptgerichte verwendet oder für zusätzlichen Geschmack und Nährstoffe in Smoothies gemischt werden."
+          "question": "Wie kann ich Microgreens beim Kochen verwenden?",
+          "answer": "Microgreens können auf vielfältige Weise in Ihrer Küche verwendet werden. Fügen Sie die Sprossen zu Salaten, Sandwiches, Wraps hinzu oder garnieren Sie Ihre Lieblingsgerichte mit diesen geschmacksintensiven Grünpflanzen. Sie eignen sich auch hervorragend als Zusatz zu Smoothies oder als Topping für Suppen und Omeletts."
         },
         {
-          "question": "Welche verschiedenen Arten von Microgreens gibt es?",
-          "answer": "Es gibt viele Arten von Microgreens, dazu gehören unter anderem Rucola, Basilikum, Rote Bete-Blätter, Brokkoli, Koriander, Grünkohl, Senfblätter, Radieschengrün und Brunnenkresse."
+          "question": "Welche verschiedenen Sorten von Microgreens bieten Sie an?",
+          "answer": "Unsere derzeitige Auswahl an Microgreens umfasst verschiedene Sorten: Wir bieten Brokkoli, Radieschen, Rote Beete, Erbsensprossen, Rucola und Koriander an. Jede Sorte bringt ein einzigartiges Geschmacksprofil und ernährungstechnische Vorteile mit sich, um Ihr kulinarisches Angebot zu bereichern. In der Zukunft möchten wir unser Angebot erweitern."
         },
         {
-          "question": "Wie lange dauert der Versand?",
-          "answer": "Die Versandzeit kann je nach Standort variieren. In der Regel dauert es 3-5 Werktage für den Inlandsversand und bis zu 2 Wochen für den internationalen Versand."
-        },
-        {
-          "question": "Wie leite ich den Rückerstattungsprozess ein?",
-          "answer": "Um eine Rückerstattung einzuleiten, kontaktieren Sie bitte unseren Kundendienst mit Ihren Bestelldetails. Rückerstattungsanfragen werden in der Regel innerhalb von 5-7 Werktagen bearbeitet."
+          "question": "Wie lange dauert die Lieferung?",
+          "answer": "Lieferzeiten können nach der aktuellen Nachfrage variieren. Generell werden wir einen geeigneten Lieferplan gemeinsam mit Ihnen besprechen, der Ihren Bedürfnissen angepasst ist. Wir streben maximale Zuverlässigkeit an und bleiben dabei konsequent in unserer Qualität."
         }
       ],
       "question": "Fragen? Kontaktieren Sie uns!",

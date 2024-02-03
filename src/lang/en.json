@@ -24,23 +24,19 @@
     "faqs": [
         {
           "question": "What are microgreens?",
-          "answer": "Microgreens are young plants (seedlings) that are eaten before they are fully mature. They include all kinds of varieties such as veggies, herbs, and legumes."
+          "answer": "Microgreens are young, edible plants that are harvested at an early stage, typically when they have developed their first set of true leaves. These tiny greens are packed with flavor and nutrients, making them a perfect addition to your dishes at a great price."
         },
         {
           "question": "How can I use microgreens in cooking?",
-          "answer": "Microgreens can be used in a variety of ways in cooking. They can be added to salads, sandwiches, and wraps for a nutritional boost, used as garnishes on soups and main dishes, or blended into smoothies for extra flavor and nutrients."
+          "answer": "Microgreens can be used in a variety of ways in your cooking. Add them to salads, sandwiches, wraps, or garnish your favorite dishes with these flavorful greens. They also make a great addition to smoothies or can be used as a topping for soups and omelets. The possibilities are endless!"
         },
         {
-          "question": "What are the different types of microgreens?",
-          "answer": "There are many types of microgreens, including but not limited to arugula, basil, beet greens, broccoli, cilantro, kale, mustard greens, radish greens, and watercress."
+          "question": "What are the different sorts of microgreens you offer?",
+          "answer": " Our current microgreens selection includes a range of options: We offer broccoli, radish, beetroot, pea shoots, arugula, and coriander (cilantro). Each variety brings a unique flavor profile and nutritional benefits to enhance your culinary experience. In the future, we want to expand our offering. "
         },
         {
-          "question": "How long does the shipping take?",
-          "answer": "The shipping time can vary depending on your location. Typically, it takes 3-5 business days for domestic shipping and up to 2 weeks for international shipping."
-        },
-        {
-          "question": "How to initiate the refund process?",
-          "answer": "To initiate a refund, please contact our customer service with your order details. Refund requests are typically processed within 5-7 business days."
+          "question": "How long does delivery take?",
+          "answer": "Delivery times may vary based on your location and current demand. Generally, we will discuss a suitable delivery schedule with you, adapted to your needs. We strive to reach maximum reliabilty while staying consistent with our quality."
         }
       ],
     "question": "Question? Contact us!",
