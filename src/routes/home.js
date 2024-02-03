@@ -13,6 +13,8 @@ import accent from "../img/logo_accent.png";
 import cpi from "../img/logo_cpi.png";
 import verdes from "../img/Verdes_Logo.png";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 // Accordion functionality for FAQ
 
@@ -274,7 +276,43 @@ const Home = () => {
             Contact Us
           </h2>
           <br></br>
-          <form onSubmit={handleSubmit} className="w-full max-w-lg">
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
+            {/* Phone Box */}
+            <a href="tel:+4367762907989">
+              <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                <div className="flex items-center space-x-3">
+                  {/* Font Awesome Phone Icon */}
+                  <FontAwesomeIcon
+                    icon={faPhoneAlt}
+                    className="text-gray-500 w-6 h-6"
+                  />
+                  <div>
+                    <p className="text-lg font-medium text-gray-900">Phone</p>
+                    <p className="text-gray-500">+43 677 62907989</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Email Box */}
+            <a href="mailto:verdesaustria@gmail.com">
+              <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100">
+                <div className="flex items-center space-x-3">
+                  {/* Font Awesome Envelope Icon */}
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="text-gray-500 w-6 h-6"
+                  />
+                  <div>
+                    <p className="text-lg font-medium text-gray-900">Email</p>
+                    <p className="text-gray-500">verdesaustria@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/*<form onSubmit={handleSubmit} className="w-full max-w-lg">
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
                 <label
@@ -348,7 +386,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-          </form>
+          </form>*/}
         </div>
       </section>
 

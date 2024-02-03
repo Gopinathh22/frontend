@@ -62,7 +62,7 @@ const AboutUs = () => {
               />
             </div>
             <div className="md:w-1/2 w-full">
-              <p className="text-lg">{t("img1Des")}.</p>
+              <p className="text-lg">{t("img1Des")}</p>
             </div>
           </div>
 

@@ -442,6 +442,7 @@ html {
 .member-info {
   font-size: 15px;
   color: #555;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
