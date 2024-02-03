@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./routes/home.js";
 import Navbar from "./routes/navbar.js";
